@@ -1,0 +1,124 @@
+// !$*UTF8*$!
+{
+	EE16FDEF139155D7005C4D60 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		codeSenseManager = EE16FDF4139155D7005C4D60 /* Code sense */;
+		ignoreBreakpointsInProjectsDict = {
+		};
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					393,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					505,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					481,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 328291799;
+			PBXWorkspaceStateSaveDate = 328291799;
+		};
+		perUserProjectItems = {
+			EE16FDFE1391569D005C4D60 /* PBXTextBookmark */ = EE16FDFE1391569D005C4D60 /* PBXTextBookmark */;
+			EE16FE081391577D005C4D60 /* PBXTextBookmark */ = EE16FE081391577D005C4D60 /* PBXTextBookmark */;
+		};
+		sourceControlManager = EE16FDF3139155D7005C4D60 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	EE16FDF3139155D7005C4D60 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	EE16FDF4139155D7005C4D60 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	EE16FDFE1391569D005C4D60 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE16FDFF1391569D005C4D60 /* pages_controller.rb */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	EE16FDFF1391569D005C4D60 /* pages_controller.rb */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.script.ruby;
+		name = pages_controller.rb;
+		path = /Users/scornelius/Sites/railsprojects/experiments/app/controllers/pages_controller.rb;
+		sourceTree = "<absolute>";
+	};
+	EE16FE081391577D005C4D60 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EE16FE091391577D005C4D60 /* pages_controller.rb */;
+		name = "pages_controller.rb: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 136;
+		vrLoc = 0;
+	};
+	EE16FE091391577D005C4D60 /* pages_controller.rb */ = {
+		isa = PBXFileReference;
+		name = pages_controller.rb;
+		path = /Users/scornelius/Sites/railsprojects/experiments/app/controllers/pages_controller.rb;
+		sourceTree = "<absolute>";
+	};
+}
