@@ -1,0 +1,1 @@
+rails generate model Simplehsmr code:string name:string year:integer quarter:integer patients:float observed:float expected:float

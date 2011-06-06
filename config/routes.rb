@@ -1,5 +1,5 @@
 Experiments::Application.routes.draw do
-  get "pages/hellochart"
+  get "pages/simplehsmrs"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

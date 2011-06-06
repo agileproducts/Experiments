@@ -1,0 +1,50 @@
+<h1>Pages#Simple HSMRs</h1>
+<%=@rr%>
+<br/>
+<%=@lcl%>
+<br/>
+<%=@ucl%>
+<br/>
+<%=@templ%>
+<br/>
+<%=@temph%>
+<br/>
+<%=@one%>
+<br/>
+<%=@two%>
+
+<table cellpadding="2">
+	<tr>
+		<th>observed</th>
+		<th>expected</th>
+		<th>relative risk</th>
+		<th>95% low</th>
+		<th>95% high</th>
+		<th>P low</th>
+		<th>P high</th>
+	</tr>
+	<% @testarray.each { |row| %>
+	<tr>
+		<td><%= row["observed"] %></td>
+		<td><%= row["expected"] %></td>
+		<td><%= row["risk"] %></td>
+		<td><%= row["blow"]%></td>
+		<td><%= row["bhigh"]%></td>
+		<td><%= row["plow"]%></td>
+		<td><%= row["phigh"]%></td>		
+	</tr>
+	<% } %>
+</table>
+
+<% @temphsmr.each do |row| %>
+	<%=row.name%>, <%=row.code%>
+<% end %>
+
+	
+
+<img src="
+<%= 
+#Gchart.line(:size => '200x300', :title => "example title",:bg => 'efefef',:legend => ['first data set label', 'second data set label'],:data => [10, 30, 120, 45, 72])
+
+
+%>"/>
