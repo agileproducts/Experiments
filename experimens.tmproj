@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Sites/railsprojects/experiments/lib/statsfunctions.rb</string>
+	<string>app/controllers/pages_controller.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,73 +21,74 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>Sites/railsprojects/experiments/app/controllers/pages_controller.rb</key>
+		<key>app/controllers/pages_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>28</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>14</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>68</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
+		</dict>
+		<key>app/views/pages/hellochart.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Sites/railsprojects/experiments/app/views/pages/hellochart.html.erb</key>
+		<key>lib/statsfunctions.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>6</integer>
+				<integer>83</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>Sites/railsprojects/experiments/config/application.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>50</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>12</integer>
-		</dict>
-		<key>Sites/railsprojects/experiments/lib/statsfunctions.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>33</integer>
-				<key>line</key>
-				<integer>31</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>62</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>Sites/railsprojects/experiments/app/controllers/pages_controller.rb</string>
-		<string>Sites/railsprojects/experiments/app/views/pages/hellochart.html.erb</string>
-		<string>Sites/railsprojects/experiments/lib/statsfunctions.rb</string>
-		<string>Sites/railsprojects/experiments/config/application.rb</string>
+		<string>lib/statsfunctions.rb</string>
+		<string>app/controllers/pages_controller.rb</string>
+		<string>app/views/pages/hellochart.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{405, 229}, {771, 635}}</string>
+	<string>{{245, 243}, {771, 635}}</string>
 </dict>
 </plist>
