@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/pages/simplehsmrs.html.erb</string>
+	<string>README</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,6 +21,20 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+		<key>README</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>6</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>app/controllers/pages_controller.rb</key>
 		<dict>
 			<key>caret</key>
@@ -112,12 +126,13 @@
 		<string>app/controllers/pages_controller.rb</string>
 		<string>script/simplehsmrmodel.txt</string>
 		<string>app/views/pages/simplehsmrs.html.erb</string>
+		<string>README</string>
 		<string>app/models/simplehsmr.rb</string>
 		<string>db/seeds.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{237, 113}, {964, 765}}</string>
+	<string>{{79, 107}, {964, 765}}</string>
 </dict>
 </plist>
