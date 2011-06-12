@@ -4,6 +4,7 @@ gem 'rails', '3.0.5'
 gem 'rake', '0.8.7'
 gem 'jquery-rails', '>=1.0.3'
 gem 'googlecharts'
+gem 'fastercsv'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

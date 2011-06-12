@@ -13,7 +13,7 @@ module Statsfunctions
   
   #functions to return 95% confidence interval via byar's approximation 
   def byarsLCL(observed,expected)  
-    if expected == 0
+    if expected == 0 or observed == 0
       lcl = 0
     else
       rrisk = ((observed.to_f / expected.to_f) * 100).round(1)
@@ -26,7 +26,7 @@ module Statsfunctions
   end
   
   def byarsUCL(observed,expected)
-    if expected ==0
+    if expected ==0 or observed ==0
       ucl = 0
     else
       rrisk = (((observed.to_f+1) / expected.to_f) * 100).round(1)
@@ -44,17 +44,19 @@ module Statsfunctions
     
     if expected < 5
       lcl = 0
+      return lcl
     else
       lcl = ((expected-expected.truncate) * (poissonLow(expected.ceil,0.001)/expected.ceil - poissonLow(expected.truncate,0.001)/expected.truncate) + poissonLow(expected.truncate,0.001)/expected.truncate) * 100     
+      return lcl.round(1)
     end
     
-    return lcl.round(1)
+    
     
   end
   
   def poissonUCL(expected, tolerance)
-    
-    ucl = ((expected-expected.truncate) * (poissonHigh(expected.ceil,0.001)/expected.ceil - poissonHigh(expected.truncate,0.001)/expected.truncate) + poissonHigh(expected.truncate,0.001)/expected.truncate) * 100  
+  
+      ucl = ((expected-expected.truncate) * (poissonHigh(expected.ceil,0.001)/expected.ceil - poissonHigh(expected.truncate,0.001)/expected.truncate) + poissonHigh(expected.truncate,0.001)/expected.truncate) * 100  
           
     return ucl.round(1)
           

@@ -1,20 +1,45 @@
 <h1>Pages#Simple HSMRs</h1>
-<%=@rr%>
-<br/>
-<%=@lcl%>
-<br/>
-<%=@ucl%>
-<br/>
-<%=@templ%>
-<br/>
-<%=@temph%>
-<br/>
-<%=@one%>
-<br/>
-<%=@two%>
+
+<script type="text/javascript" src="https://www.google.com/jsapi">
+	
+</script>
+
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Expected');
+        data.addColumn('number', 'Relative Risk');
+		data.addColumn('number', 'Poisson Low');
+		data.addColumn('number', 'Poisson High');
+        data.addRows(<%= @hsmrtable.size %>);
+		//this is really crude, should do it with json
+		<% @hsmrtable.each_with_index { |row, index| %>
+			data.setValue(<%=index%>,0,<%=row.expected%>);
+			data.setValue(<%=index%>,1,<%=row.risk%>);
+			data.setValue(<%=index%>,2,<%=row.plcl%>);
+			data.setValue(<%=index%>,3,<%=row.pucl%>);
+		<% } %>	
+
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data,{width: 700, height: 400,
+		                          hAxis: {title: 'Expected'},
+		                          vAxis: {title: 'Relative Risk'},
+		                          legend: 'none'
+		                         });
+      }
+</script>
+
+<div id="chart_div"></div>
+
+
 
 <table cellpadding="2">
 	<tr>
+		<th>code</th>
+		<th>hospital</th>
 		<th>observed</th>
 		<th>expected</th>
 		<th>relative risk</th>
@@ -23,28 +48,21 @@
 		<th>P low</th>
 		<th>P high</th>
 	</tr>
-	<% @testarray.each { |row| %>
-	<tr>
-		<td><%= row["observed"] %></td>
-		<td><%= row["expected"] %></td>
-		<td><%= row["risk"] %></td>
-		<td><%= row["blow"]%></td>
-		<td><%= row["bhigh"]%></td>
-		<td><%= row["plow"]%></td>
-		<td><%= row["phigh"]%></td>		
+	<% @hsmrtable.each_with_index { |row, index| %>
+	<tr id="<%= index %>">
+		<td><%= row.code %></td>
+		<td><%= row.name %></td>
+		<td><%= row.observed %></td>
+		<td><%= row.expected %></td>
+		<td><%= row.risk %></td>
+		<td><%= row.blcl%></td>
+		<td><%= row.bucl%></td>
+		<td><%= row.plcl%></td>
+		<td><%= row.pucl%></td>		
 	</tr>
 	<% } %>
 </table>
 
-<% @temphsmr.each do |row| %>
-	<%=row.name%>, <%=row.code%>
-<% end %>
-
-	
-
-<img src="
-<%= 
-#Gchart.line(:size => '200x300', :title => "example title",:bg => 'efefef',:legend => ['first data set label', 'second data set label'],:data => [10, 30, 120, 45, 72])
 
 
-%>"/>
+

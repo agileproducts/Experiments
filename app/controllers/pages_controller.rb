@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   	@templ = poissonLCL(178.35,0.001)
   	@temph = poissonUCL(178.35,0.001)
   	
-  	@temphsmr = Simplehsmr.all  	
+  	@hsmrtable = Simplehsmr.all  	
 
   	
   	testarray = [
@@ -18,13 +18,13 @@ class PagesController < ApplicationController
   	  { "observed" => 939, "expected" => 931.93 }
   	 ]
   	 
-  	 testarray.each do |row| 
-  	      row["risk"] = relativeRisk(row["observed"],row["expected"])
-  	      row["blow"] = byarsLCL(row["observed"],row["expected"])
-   	      row["bhigh"] = byarsUCL(row["observed"],row["expected"])
-   	      row["plow"] = poissonLCL(row["expected"],0.001)
-   	      row["phigh"] = poissonUCL(row["expected"],0.001)
-  	  end
+  #	 @hsmrtable.each do |row| 
+  #	      row["risk"] = relativeRisk(row["observed"],row["expected"])
+  #	      row["blow"] = byarsLCL(row["observed"],row["expected"])
+   #	      row["bhigh"] = byarsUCL(row["observed"],row["expected"])
+#   	      row["plow"] = poissonLCL(row["expected"],0.001)
+ #  	      row["phigh"] = poissonUCL(row["expected"],0.001)
+  #ß	  end
   	   
   @testarray = testarray
   	
