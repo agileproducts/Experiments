@@ -38,15 +38,15 @@ module Statsfunctions
     return ucl
   end
   
-  #functions to calculate 99.8% poisson control limits
+  #functions to calculate poisson control limits
   
-  def poissonLCL(expected,tolerance)
+  def poissonLCL(expected,width)
     
     if expected < 5
       lcl = 0
       return lcl
     else
-      lcl = ((expected-expected.truncate) * (poissonLow(expected.ceil,0.001)/expected.ceil - poissonLow(expected.truncate,0.001)/expected.truncate) + poissonLow(expected.truncate,0.001)/expected.truncate) * 100     
+      lcl = ((expected-expected.truncate) * (poissonLow(expected.ceil,width)/expected.ceil - poissonLow(expected.truncate,width)/expected.truncate) + poissonLow(expected.truncate,width)/expected.truncate) * 100     
       return lcl.round(1)
     end
     
@@ -54,9 +54,9 @@ module Statsfunctions
     
   end
   
-  def poissonUCL(expected, tolerance)
+  def poissonUCL(expected, width)
   
-      ucl = ((expected-expected.truncate) * (poissonHigh(expected.ceil,0.001)/expected.ceil - poissonHigh(expected.truncate,0.001)/expected.truncate) + poissonHigh(expected.truncate,0.001)/expected.truncate) * 100  
+      ucl = ((expected-expected.truncate) * (poissonHigh(expected.ceil,width)/expected.ceil - poissonHigh(expected.truncate,width)/expected.truncate) + poissonHigh(expected.truncate,width)/expected.truncate) * 100  
           
     return ucl.round(1)
           

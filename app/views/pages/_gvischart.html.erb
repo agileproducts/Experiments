@@ -1,0 +1,33 @@
+<script type="text/javascript" src="https://www.google.com/jsapi">
+	
+</script>
+
+<script type="text/javascript">
+     google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Expected');
+        data.addColumn('number', 'Relative Risk');
+		data.addColumn('number', 'Poisson Low');
+		data.addColumn('number', 'Poisson High');
+        data.addRows(<%= @hsmrtable.size %>);
+		//this is really crude, should do it with json
+		<% @hsmrtable.each_with_index { |row, index| %>
+			data.setValue(<%=index%>,0,<%=row.expected%>);
+			data.setValue(<%=index%>,1,<%=row.risk%>);
+			data.setValue(<%=index%>,2,<%=row.plcl%>);
+			data.setValue(<%=index%>,3,<%=row.pucl%>);
+		<% } %>	
+
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data,{width: 700, height: 400,
+		                          hAxis: {title: 'Expected'},
+		                          vAxis: {title: 'Relative Risk'},
+		                          legend: 'none'
+		                         });
+      }
+</script>
+
+<div id="chart_div"></div>

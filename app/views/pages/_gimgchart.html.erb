@@ -1,0 +1,18 @@
+<%
+@mychartstring =	"https://chart.googleapis.com/chart?"+
+					"cht=s"+ #scatter chart
+					"&chd=t:"+@expectedsStr+"|"+@risksStr+
+					"&chxt=x,y,x,y"+ #makes axes visible
+					"&chs=700x400"+ #chart size
+					"&chds=0,500,50,150"+ #sets scaling of data
+					"&chxr=0,0,500|1,50,150"+ #sets scaling of axes
+					"&chxl=2:|Expected|3:|HSMR"+ #sets axis labels
+					"&chxp=2,50|3,50"+ #centres axis labels
+					"&chco=336699|FFCC00|FFCC00" #colours fake series
+																		
+						
+%>
+
+
+
+<%=image_tag @mychartstring %>
