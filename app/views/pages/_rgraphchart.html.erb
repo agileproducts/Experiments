@@ -1,0 +1,39 @@
+<%= javascript_include_tag "RGraph/RGraph.common.core.js" %>
+<%= javascript_include_tag "RGraph/RGraph.common.tooltips.js" %>
+<%= javascript_include_tag "RGraph/RGraph.line.js" %>
+<%= javascript_include_tag "RGraph/RGraph.scatter.js" %>
+
+
+
+<script>
+    window.onload = function ()
+    {
+        var data = <%=raw @chartdata.to_json%>;
+        var sg = new RGraph.Scatter('myCanvas', data);
+        sg.Set('chart.background.barcolor1','rgba(255,255,255,1)');
+        sg.Set('chart.background.barcolor2', 'rgba(255,255,255,1)');
+        sg.Set('chart.grid.color', 'rgba(238,238,238,1)');
+        sg.Set('chart.gutter.left', 30);
+        sg.Set('chart.xmax', 500); // Important!
+		sg.Set('chart.tickmarks', 'circle');
+		sg.Set('chart.ticksize', 6);
+        sg.Draw();
+
+        var data2 = <%=raw @chartdata2.to_json%>;
+        var sg2 = new RGraph.Scatter('myCanvas2', data2);
+        sg2.Set('chart.background.barcolor1','rgba(255,255,255,1)');
+        sg2.Set('chart.background.barcolor2', 'rgba(255,255,255,1)');
+        sg2.Set('chart.grid.color', 'rgba(238,238,238,1)');
+        sg2.Set('chart.gutter.left', 30);
+        sg2.Set('chart.xmax', 500); // Important!
+		sg2.Set('chart.tickmarks', 'circle');
+		sg2.Set('chart.ticksize', 3);
+		sg2.Set('chart.line',true)
+        sg2.Draw();
+
+    }
+</script>
+
+<canvas id="myCanvas" width="600" height="400">[No canvas support]</canvas>
+
+<canvas id="myCanvas2" width="600" height="400">[No canvas support]</canvas>

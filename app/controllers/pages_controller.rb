@@ -8,14 +8,20 @@ class PagesController < ApplicationController
   	
   	@expecteds = []
   	@risks = []
+  	@chartdata = []
+  	@chartdata2 = []
+
   	
   	@hsmrtable.each {|row| 
   	  @expecteds << row.expected << row.expected << row.expected
   	  @risks << row.risk << row.plcl << row.pucl
+  	  @chartdata << [row.expected,row.risk,'blue',row.name]
+  	  @chartdata2 << [row.expected,row.plcl,'red']
   	}
   	
   	@expectedsStr = @expecteds.join(',')
   	@risksStr = @risks.join(',')
+
   	  	
 
 # Ulm K. A simple method to calculate the confidence interval of a standardized mortality ratio. American Journal of Epidemiology 1990;131(2):373-375.
